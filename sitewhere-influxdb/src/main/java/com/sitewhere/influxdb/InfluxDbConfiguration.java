@@ -85,6 +85,9 @@ public class InfluxDbConfiguration extends JsonConfiguration {
 	this.password = configurableString("password", configuration, DEFAULT_PASSWORD);
 	this.database = configurableString("databaseName", configuration, DEFAULT_DATABASE);
 	this.retention = configurableString("retention", configuration, DEFAULT_RETENTION);
+    this.enableBatch = configurableBoolean("enableBatch", configuration, true);
+    this.batchChunkSize = configurableInt("batchChunkSize", configuration, 2000);
+    this.batchIntervalMs = configurableInt("batchIntervalMs", configuration, 100);
 	return influx;
     }
 

@@ -94,7 +94,7 @@ public class Postgres95Provider extends RdbProviderInformation<PostgresConnectio
      */
     @Override
     public String buildJdbcUrl(String dbname) {
-	return String.format("jdbc:postgresql://%s:%d/%s", getConnectionInfo().getHostname(),
+	return String.format("jdbc:postgresql://%s:%d/%s?tcpNoDelay=true", getConnectionInfo().getHostname(),
 		getConnectionInfo().getPort(), dbname);
     }
 }
