@@ -39,7 +39,7 @@ public class PostgresConnectionInfo extends JsonConfiguration implements IConnec
     private static final String DEFAULT_PASSWORD = "";
 
     /** Default max connections */
-    private static final int DEFAULT_MAX_CONNECTIONS = 5;
+    private static final int DEFAULT_MAX_CONNECTIONS = 100;
 
     /** Database hostname */
     private String hostname;
